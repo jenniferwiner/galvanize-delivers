@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Galvanize Delivers</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" charset="utf-8"></script>
+  <script src="js/materialize.min.js" charset="utf-8"></script>
+  <script src="index.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper blue lighten-2">
+          <a href="index.html" class="brand-logo">Galvanize Delivers</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li class="active"><a href="order.html">Order Delivery</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li>
+              <h5 class="center-align">Galvanize Delivers</h5>
+              <div class="userView">
+                <div class="background center-align">
+                  <img src="img/sidebar.jpg">
+                </div>
+              </div>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="order.html">Order Delivery</a></li>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="ordering container">
+      <div class="row">
+        <div class="col m7">
+          <h4>Products</h4>
+          <div class="row">
+            <div class="col m12 l6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/toiletpaper.jpg">
+                  <a class="btn-floating halfway-fab waves-effect waves-light deep-orange"><i class="material-icons items shoppingcart" id="toiletpaper">shopping_cart</i></a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Toilet Paper</span>
+                  <p>Scott</p>
+                  <p>4 Rolls</p>
+                  <p>$5.49</p>
+                </div>
+              </div>
+            </div>
+            <div class="col m12 l6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/mouthwash.jpg">
+                  <a class="btn-floating halfway-fab waves-effect waves-light deep-orange"><i class="material-icons items" id="mouthwash">shopping_cart</i></a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Mouthwash</span>
+                  <p>Listerine</p>
+                  <p>Cool Mint, 1.5L</p>
+                  <p>$5.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col m12 l6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/toothbrush.jpg">
+                    <a class="btn-floating halfway-fab waves-effect waves-light deep-orange"><i class="material-icons items" id="toothbrush">shopping_cart</i></a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Toothbrush</span>
+                  <p>Colgate</p>
+                  <p>Medium Bristles</p>
+                  <p>$1.25</p>
+                </div>
+              </div>
+            </div>
+            <div class="col m12 l6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/toothpaste.jpg">
+                  <a class="btn-floating halfway-fab waves-effect waves-light deep-orange"><i class="material-icons items" id="toothpaste">shopping_cart</i></a>
+                </div>
+                <div class="card-content">
+                  <span class="card-title">Toothpaste</span>
+                  <p>Crest Complete</p>
+                  <p>With Scope, 4.6oz</p>
+                  <p>$2.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col m5">
+          <h4>Order</h4>
+          <table class="striped">
+            <thead>
+              <tr>
+                <th data-field="id">Item</th>
+                <th data-field="totals" class="center-align">Quantity</th>
+                <th></th>
+                <th data-field="price" class="right-align">Price</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot class="hide">
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="right-align">Subtotal</td>
+                <td class="right-align" id="subtotal"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="right-align">Tax</td>
+                <td class="right-align" id="tax"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td class="right-align">Total</td>
+                <td class="right-align" id="total"></td>
+              </tr>
+            </tfoot>
+          </table>
+
+
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="col s12">
+                    <br>
+                    <br>
+                    <h6 class="center-align">Customer Information</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix icon-blue">account_circle</i>
+                  <input id="name" type="text" class="validate">
+                  <label for="name">Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix icon-blue">phone</i>
+                  <input id="phone" type="tel" class="validate" pattern="^\d{3}-\d{3}-\d{4}$">
+                  <label for="phone" data-error="Enter a valid phone number.">Phone Number</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix icon-blue">business</i>
+                  <input id="address" type="text" class="validate">
+                  <label for="address">Address</label>
+                </div>
+              </div>
+              <div class="row right-align">
+                <div class="col s12">
+                  <button class="btn waves-effect waves-light blue lighten-2" type="submit" name="action" value="Submit" id="btn">Place Order</button>
+                </div>
+              </div>
+              <div class="row right-align"
+                <div class="col s12">
+                  <button class="btn waves-effect waves-light deep-orange" type="submit" name="action" id="cancel">Cancel Order</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer blue lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col m8 s12">
+          <h5 id="gDeliversFooter">Galvanize Delivers</h5>
+          <p>Your Toiletries. Delivered.</p>
+        </div>
+        <div class="col m4 s12">
+          <ul>
+            <li><a href="index.html""footerLinks">Home</a></li>
+            <li><a href="order.html">Order Delivery</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <sm>&copy;2016 Galvanize Delivers</sm>
+      </div>
+  </footer>
+
+
+</body>
+
+</html>
