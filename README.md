@@ -74,4 +74,6 @@ Review the following articles on the Surge platform and then deploy your website
 
 A good domain name for this project is `USERNAME-galvanize-delivers.surge.sh` where `USERNAME` is your GitHub username in all **lowercase** letters. Once deployed and everything works as you expect, copy the URL to your site and paste it below.
 
-PASTE YOUR PRODUCTION URL HERE
+PASTE YOUR PRODUCTION URL HERE:
+
+jenniferwiner-galvanize-delivers.surge.sh
